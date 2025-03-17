@@ -6,14 +6,11 @@ import Navbar from "../component/Navbar/navbar";
 import Home from "../pages/Home/index";
 
 const App = () => {
-
-
   return (
     <div className="max-w-full">
       <div className="container mx-auto">
         <Navbar/>
         <Home />
-      
       </div>
     </div>
   );
