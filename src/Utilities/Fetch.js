@@ -15,7 +15,7 @@ const useFetch = (url) => {
       try {
         const response = await axios.get(url);
         if (isMounted) {
-          setData(response.data.results || []);
+          setData(response.data || []);
         }
       } catch (err) {
         if (isMounted) {
