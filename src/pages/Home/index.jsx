@@ -1,5 +1,7 @@
 import Banner from "../../component/Slides/Banner";
 import useFetch from "../../Utilities/Fetch";
+import MoviePoster from "../../component/MoviePoster";
+
 
 function Home() {
   const apiKey = import.meta.env.VITE_API_KEY;
@@ -11,17 +13,15 @@ function Home() {
   if (error) return <p>Error: {error.message || "Something went wrong!"}</p>;
 
   return (
-    <div>
-      <Banner />
-      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-2">
-        {data?.map((movie) => (
-          <div key={movie.id}>
-            <p>{movie.title}</p>
-          </div>
-          
-          
-        ))}
+    <div className="max-w-full">
+      <div className="container mx-auto">
+        <Banner />
+        <h1 className="text-white text-2xl text-center font-bold my-2">
+          MOVIE SELECTION
+        </h1>
+        <MoviePoster movies={data || []}/>
       </div>
+     
     </div>
   );
 }
