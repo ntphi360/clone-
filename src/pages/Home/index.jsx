@@ -17,7 +17,7 @@ function Home() {
       <div className="container mx-auto">
         <Banner />
         <h1 className="text-white text-2xl text-center font-bold my-2">
-          MOVIE SELECTION
+          MOVIES TODAY 
         </h1>
         <MoviePoster movies={data || []}/>
       </div>
